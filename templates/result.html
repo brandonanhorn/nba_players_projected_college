@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>College predicting fun</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .panel-heading {
+     margin-bottom: 0;
+   }
+
+   .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+   form {
+    margin-bottom: 0;
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>What College?</h1>
+  </div>
+</div>
+  <form action="/result" method="POST">
+  <div class="container text-center">
+        <div class="panel panel-primary">
+          <div class="panel-heading">{{ prediction }}</div>
+          <div class="panel-body"><img src="https://media3.giphy.com/media/l46ChALK3WcerMu8E/200.webp?cid=790b76117d339af94d8072ba50172a109e2bcdd6989f8a32&rid=200.webp" class="center" style="width:300px;height:300px;" alt="Image"></div>
+            </select>
+          </div>
+    </div>
+  </div><br><br>
+
+  <footer class="container-fluid text-center">github.com/brandonanhorn
+  </form>
+  </footer>
+
+</body>
+</html>

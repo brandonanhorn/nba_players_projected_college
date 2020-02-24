@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>College predicting fun</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>What College?</h1>
+    <p>Predict where NBA players went to college.</p>
+  </div>
+</div>
+  <form action="/result" method="POST">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Player Height:</div>
+          <div class="panel-body"><img src="https://thehealthfitnesstips.com/wp-content/uploads/2019/10/Capture-1.png" class="img-responsive" style="width:300px;height:300px;" alt="Image"></div>
+          <div class="panel-footer">
+            <select name="player_height">
+              <option value='5-3'>5'3</option>
+              <option value='5-5'>5'5</option>
+              <option value='5-11'>5'11</option>
+              <option value='6-0'>6'0</option>
+              <option value='6-1'>6'1</option>
+              <option value='6-2'>6'2</option>
+              <option value='6-3'>6'3</option>
+              <option value='6-4'>6'4</option>
+              <option value='6-5'>6'5</option>
+              <option value='6-6'>6'6</option>
+              <option value='6-7'>6'7</option>
+              <option value='6-8'>6'8</option>
+              <option value='6-9'>6'9</option>
+              <option value='6-10'>6'10</option>
+              <option value='6-11'>6'11</option>
+              <option value='7-0'>7'0</option>
+              <option value='7-1'>7'1</option>
+              <option value='7-2'>7'2</option>
+              <option value='7-3'>7'3</option>
+              <option value='7-4'>7'4</option>
+              <option value='7-5'>7'5</option>
+              <option value='7-6'>7'6</option>
+              <option value='7-7'>7'7</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Country:</div>
+          <div class="panel-body"><img src="https://geology.com/world/world-map.gif" class="img-responsive" style="width:300px;height:300px;" alt="Image"></div>
+          <div class="panel-footer">
+            <select name="country">
+              <option value='Angola'>Angola</option>
+              <option value='Argentina'>Argentina</option>
+              <option value='Austria'>Austria</option>
+              <option value='Australia'>Australia</option>
+              <option value='Bahamas'>Bahamas</option>
+              <option value='Belize'>Belize</option>
+              <option value='Bosnia'>Bosnia</option>
+              <option value='Bosnia and Herzegovina'>Bosnia and Herzegovina</option>
+              <option value='Brazil'>Brazil</option>
+              <option value='Cabo Verde'>Cabo Verde</option>
+              <option value='Cameroon'>Cameroon</option>
+              <option value='Canada'>Canada</option>
+              <option value='China'>China</option>
+              <option value='Congo'>Congo</option>
+              <option value='Croatia'>Croatia</option>
+              <option value='Czech Republic'>Czech Republic</option>
+              <option value='Democratic Republic of the Congo'>Democratic Republic of the Congo</option>
+              <option value='Dominican Republic'>Dominican Republic</option>
+              <option value='Egypt'>Egypt</option>
+              <option value='England'>England</option>
+              <option value='Finland'>Finland</option>
+              <option value='France'>France</option>
+              <option value='Gabon'>Gabon</option>
+              <option value='Georgia'>Georgia</option>
+              <option value='Germany'>Germany</option>
+              <option value='Great Britain'>Great Britain</option>
+              <option value='Greece'>Greece</option>
+              <option value='Guinea'>Guinea</option>
+              <option value='Haiti'>Haiti</option>
+              <option value='Iran'>Iran</option>
+              <option value='Ireland'>Ireland</option>
+              <option value='Israel'>Israel</option>
+              <option value='Italy'>Italy</option>
+              <option value='Jamaica'>Jamaica</option>
+              <option value='Japan'>Japan</option>
+              <option value='Latvia'>Latvia</option>
+              <option value='Lithuania'>Lithuania</option>
+              <option value='Macedonia'>Macedonia</option>
+              <option value='Montenegro'>Montenegro</option>
+              <option value='Mali'>Mali</option>
+              <option value='Mexico'>Mexico</option>
+              <option value='Netherlands'>Netherlands</option>
+              <option value='New Zealand'>New Zealand</option>
+              <option value='Nigeria'>Mali</option>
+              <option value='Panama'>Panama</option>
+              <option value='Poland'>Poland</option>
+              <option value='Puerto Rico'>Puerto Rico</option>
+              <option value='Russia'>Russia</option>
+              <option value='Sudan'>Sudan</option>
+              <option value='South Sudan'>South Sudan</option>
+              <option value='Sweden'>Sweden</option>
+              <option value='Sudan (UK)'>Sudan (UK)</option>
+              <option value='Switzerland'>Switzerland</option>
+              <option value='South Korea'>South Korea</option>
+              <option value='Scotland'>Scotland</option>
+              <option value='Serbia'>Serbia</option>
+              <option value='Spain'>Spain</option>
+              <option value='Senegal'>Senegal</option>
+              <option value='Slovenia'>Slovenia</option>
+              <option value='Serbia and Montenegro'>Serbia and Montenegro</option>
+              <option value='St. Vincent & Grenadines'>St. Vincent & Grenadines</option>
+              <option value='Trinidad and Tobago'>Trinidad and Tobago</option>
+              <option value='Tunisia'>Tunisia</option>
+              <option value='Tanzania'>Tanzania</option>
+              <option value='Turkey'>Turkey</option>
+              <option value='USSR'>USSR</option>
+              <option value='Uruguay'>Uruguay</option>
+              <option value='United Kingdom'>United Kingdom</option>
+              <option value='U.S. Virgin Islands'>U.S. Virgin Islands</option>
+              <option value='Ukraine'>Ukraine</option>
+              <option value='US Virgin Islands'>US Virgin Islands</option>
+              <option value='USA'>USA</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Draft Year:</div>
+          <div class="panel-body"><img src="https://creativeliberty.files.wordpress.com/2008/12/1124434_24772416.jpg" class="img-responsive" style="width:300px;height:300px;" alt="Image"></div>
+          <div class="panel-footer">
+            <p><input type="str" name="draft_year" /></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Draft Round:</div>
+          <div class="panel-body"><img src="https://pbs.twimg.com/media/D9j0qIsWkAArjkO.jpg" class="img-responsive" style="width:300px;height:300px;" alt="Image"></div>
+          <div class="panel-footer">
+            <p><input type="str" name="draft_round" /></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading ">Draft Number:</div>
+          <div class="panel-body"><img src="https://cdn.clipart.email/b941d228836eb57037e5badc6004ec5f_28-collection-of-numbers-clipart-1-30-high-quality-free-_237-300.jpeg" class="img-responsive" style="width:300px;height:300px;" alt="Image"></div>
+          <div class="panel-footer">
+            <p><input type="str" name="draft_number" /></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+
+  <footer class="container-fluid text-center">
+  <p><input type="submit" name='submit' /></p>
+  </form>
+</footer>
+
+</body>
+</html>
